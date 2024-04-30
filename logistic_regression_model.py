@@ -11,12 +11,12 @@ import os             # Good for navigating your computer's files
 import numpy as np    # Great for lists (arrays) of numbers
 import pandas as pd   # Great for tables (google spreadsheets, microsoft excel, csv)
 from sklearn.metrics import accuracy_score   # Great for creating quick ML models
-from google.colab import drive #COMMENT OUT IF USING GRADESCOPE
-drive.mount('/content/drive') #COMMENT OUT IF USING GRADESCOPE
+#from google.colab import drive #COMMENT OUT IF USING GRADESCOPE
+#drive.mount('/content/drive') #COMMENT OUT IF USING GRADESCOPE
 from sklearn.model_selection import train_test_split
 
 
-data_path  = '/content/drive/MyDrive/Dataset/Excel1.xlsx'
+data_path  = 'Excel1.xlsx'
 
 dataframe = pd.read_excel(data_path)
 
