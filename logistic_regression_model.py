@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score   # Great for creating quick ML model
 from sklearn.model_selection import train_test_split
 
 
-data_path  = 'Excel1.xlsx'
+data_path  = '/content/drive/MyDrive/Dataset/Excel1.xlsx'
 
 dataframe = pd.read_excel(data_path)
 
