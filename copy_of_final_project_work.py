@@ -100,22 +100,13 @@ def cleanAreaList(areas, percentile):
 
   return result
 
-def dataWriter(contours1, contours2):       # Converts the nested list to an Excel spreadsheet
-
-  list_count = [i for i in range(1,201)]
-  contours1Short = contours1[:200]
-  contours2Short = contours2[:200]
-
-  df = pd.DataFrame({'Count': [list_count],'BenignContours': [contours1Short], 'MalignantContours': [contours2Short]})
-
-  #with pd.ExcelWriter("outputFile.xlsx") as writer:
-  #df.to_excel(writer, sheet_name = "output_sheet")      # Creates the sheet with the name output_sheet
-  #print("Saved excel file")   # Confirmation that it saved the excel file
-
 def main():
 
   image1 = '/content/drive/MyDrive/ImagesDataset/101B.PNG'   # Use the first image as an example
   image2 = '/content/drive/MyDrive/ImagesDataset/101M.PNG'
+
+  #image1 = '101B.PNG'
+  #image2 = '101M.PNG'
 
   contours1 = contourFinder(image1, 130)      # Call the contourFinder function
   contours2 = contourFinder(image2, 125)      # Call the contourFinder function
@@ -137,8 +128,6 @@ def main():
 
   print('Maximum Area of Benign Nuclei:', maxAreaB)
   print('Maximum Area of Malignant Nuclei:', maxAreaM)
-
-  dataWriter(contours1, contours2)
 
 if __name__ == "__main__":
   main()
